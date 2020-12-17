@@ -7,17 +7,24 @@
 int main(int argc, char *argv[]) {
 	
 	//array declareation
-	int i, aerage;
+	int i, average;
 	int sum;
 	int grade[SIZE];
+
 	
 	printf("input %i score\n", SIZE);
 	
-	for(i=0;i<SIZE;i++)
-		scanf("%d", &grade[i]);
+	for(i=0;i<SIZE;i++){
+		scanf("%d", &grade[i]);	
+		sum += grade[i];
+	}
 		
 	for(i=0;i<SIZE;i++)
 		printf("grade[%d]=%d\n", i, grade[i]);
+		
+	
+	average = sum/SIZE;
+	printf("average : %i\n", average);
 	
 	
 	return 0;
